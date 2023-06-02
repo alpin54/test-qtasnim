@@ -1,0 +1,197 @@
+/*/
+ * Custom CSS
+ * -----------------------------------------------------------------------------
+/*/
+
+#wrapper {
+  padding-top: 144px;
+}
+
+.btn-custom .custom-loader span {
+  border-color: #fff transparent transparent transparent;
+}
+
+
+#topnav .topbar-main {
+  background-color: #ff8a00;
+}
+
+#topnav .topbar-main .logo {
+  float: none;
+  text-align: center;
+}
+
+#topnav .navigation-menu > li > a i,
+#topnav .navigation-menu > li > a span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-custom {
+  text-align: center;
+  background-color: #fff;
+}
+
+@media (max-width: 992px) {
+  #wrapper {
+    padding-top: 84px;
+  }
+
+  #topnav .topbar-main .logo {
+    float: left;
+    text-align: left;
+    line-height: 60px;
+  }
+}
+
+.project-sort-left {
+  float: left;
+}
+
+.project-sort-right {
+  float: right;
+}
+
+.custom-loader-bg {
+  display: table;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.custom-loader-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.custom-loader-box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+.custom-loader-box .custom-loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+.custom-loader-box .custom-loader span {
+  border-width: 6px;
+}
+.custom-loader {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.btn-custom:active .custom-loader span,
+.btn-custom:hover .custom-loader span {
+  border-color: #fff transparent transparent transparent;
+}
+
+.custom-loader span {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: custom-loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.custom-loader span:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.custom-loader span:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.custom-loader span:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes custom-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tabs {
+  padding: 20px;
+  box-shadow: 0 0px 8px 0 rgb(0 0 0 / 6%), 0 1px 0px 0 rgb(0 0 0 / 2%);
+  border-radius: 5px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+}
+
+.tabs-control {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+}
+
+.tabs-control-item {
+  width: 100%;
+  text-align: center;
+  border-right: solid 1px #ddd;
+}
+
+.tabs-control-item.active .tabs-control-link {
+  color: #ff8a00;
+}
+
+.tabs-control-item:last-child {
+  border-right: none;
+}
+
+.tabs-control-link {
+  font-size: 15px;
+  color: #435966;
+  transition: all 0.3s ease;
+}
+
+.tabs-control-link:hover {
+  color: #ff8a00;
+}
+
+.tabs-control-item i {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.error label {
+  font-size: 14px;
+  color: #212529;
+}
+
+.error .form-control {
+  border-color: #ff5b5b;
+}
+
+.form-alert {
+  display: none;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.error .form-alert {
+  display: block;
+}
