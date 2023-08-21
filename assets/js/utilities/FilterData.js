@@ -2,16 +2,10 @@
 import { WHITESPACE } from "../variables/index.js";
 
 // --- utilities
-import {
-  Date,
-} from "../utilities/index.js";
+import { Date } from "../utilities/index.js";
 
 // --- components
-import {
-  Type,
-  Product,
-  Sale,
-} from "../components/index.js";
+import { Type, Product, Sale } from "../components/index.js";
 
 /* ------------------------------------------------------------------------------
 @name: FilterData
@@ -19,7 +13,6 @@ import {
 --------------------------------------------------------------------------------- */
 
 var FilterData = {
-
   handleGetData: function (_filter) {
     if ($(".js-type-result").length) {
       Type.handleGetData(_filter);
@@ -37,12 +30,13 @@ var FilterData = {
       e.preventDefault();
       var _startPage = $(this).data("ci-pagination-page");
       var _showPerPage = $(".js-show-per-page").val();
-      var _keyword = $(".js-keyword").val();
+      var _keyword = $(".js-keyword").val() !== "" ? $(".js-keyword").val() : 0;
       var _filter = {
         startPage: _startPage,
         limitPage: _showPerPage,
         keyword: _keyword,
       };
+      console.log(_filter);
 
       FilterData.handleGetData(_filter);
     });
@@ -84,7 +78,7 @@ var FilterData = {
 
   handleResetData: function () {
     $(".js-reset-data").on("click", function () {
-      var _dateRange = $(".js-date-range-picker").attr('data-date');
+      var _dateRange = $(".js-date-range-picker").attr("data-date");
       $(".js-show-per-page").val("10");
       $(".js-keyword").val("");
       if ($(".js-date-range-picker").length) {
